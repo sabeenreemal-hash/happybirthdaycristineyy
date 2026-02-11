@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Sister 💜</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Georgia', serif;
+    background:linear-gradient(135deg,#8e2de2,#4a00e0);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+    color:#333;
+}
+
+/* Envelope */
+.envelope-wrapper{
+    position:relative;
+    cursor:pointer;
+}
+
+.envelope{
+    width:300px;
+    height:200px;
+    background:#fff;
+    position:relative;
+    border-radius:6px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.4);
+}
+
+.flap{
+    position:absolute;
+    width:100%;
+    height:100px;
+    background:#f3f3f3;
+    top:0;
+    left:0;
+    clip-path:polygon(0 0,100% 0,50% 100%);
+    transition:0.8s;
+    transform-origin:top;
+}
+
+.open .flap{
+    transform:rotateX(180deg);
+}
+
+.text-hint{
+    position:absolute;
+    width:100%;
+    text-align:center;
+    top:80px;
+    font-weight:bold;
+    color:#8e2de2;
+}
+
+/* Letter */
+.letter{
+    position:absolute;
+    width:280px;
+    height:380px;
+    background:white;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0);
+    padding:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.4);
+    border-radius:10px;
+    overflow-y:auto;
+    transition:0.8s;
+}
+
+.show-letter{
+    transform:translate(-50%,-50%) scale(1);
+}
+
+.letter h2{
+    text-align:center;
+    color:#8e2de2;
+}
+
+.letter p{
+    font-size:16px;
+    line-height:1.6;
+}
+
+.photo{
+    width:100%;
+    margin-top:15px;
+    border-radius:10px;
+}
+
+.signature{
+    margin-top:20px;
+    font-weight:bold;
+    text-align:right;
+    color:#8e2de2;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="envelope-wrapper" onclick="openLetter()">
+    <div class="envelope" id="envelope">
+        <div class="flap"></div>
+        <div class="text-hint">Click to Open ✉️</div>
+    </div>
+</div>
+
+<div class="letter" id="letter">
+
+    <h2>Happy Birthday 💜</h2>
+
+    <p>
+    To my k ko my ni To Cristiney , my sister ( respect gareko ni feri 🤣),  
+    On this special day, I just want you to know how much you mean to me.  
+    You are not just someone I laugh with…  
+    You are someone I trust, someone I feel safe with. ( ChatGpt use gareko haina haii 🥹)
+    </p>
+
+    <p>
+    Thank you for understanding me without words,  
+    for supporting me in my worst moments,  
+    and yeti english vaye pugxa hola😆.
+    </p>
+
+    <p>
+    I pray that your life is filled with happiness, success, love, and peace.  
+    May all your dreams come true because you truly deserve the world.
+    </p>
+    
+    <p>
+      Story chai khais vanera sochis vane bihana her haii yo message ni schedule ma cha 😭.. 
+      Lastai alxi xu 12 baje samma kasari uthnu 🥹.. Taini Once again happy birthday Cristina, cristu, krish2 aru nickname ta taha xaina 🤣.
+      
+    </p>
+
+    <!-- Change this image link -->
+    <img src="https://i.ibb.co/F48SLgQv/IMG-20260211-223059-373.jpg" class="photo">
+
+    <div class="signature">
+        Always with you 💜<br>
+        Your Sabineyyyy 
+    </div>
+
+</div>
+
+<script>
+function openLetter(){
+    document.getElementById("envelope").classList.add("open");
+    setTimeout(()=>{
+        document.getElementById("letter").classList.add("show-letter");
+        document.querySelector(".envelope-wrapper").style.display="none";
+    },800);
+}
+</script>
+
+</body>
+</html>
